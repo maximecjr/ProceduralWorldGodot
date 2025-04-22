@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg1ji0h13aouy"]
+[gd_scene load_steps=5 format=3 uid="uid://cg1ji0h13aouy"]
 
 [ext_resource type="Script" uid="uid://dpbtqan8hk2vu" path="res://Scenes/Main.cs" id="1_r150o"]
 [ext_resource type="Script" uid="uid://igxft7k8ty3j" path="res://Scenes/OrbitCamera.cs" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://b2kq4cmuv0esk" path="res://Scenes/TerrainGenerator.tscn" id="3_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://hf28p646oj7l" path="res://Scenes/TextureGeneration.tscn" id="4_pbw6q"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("_mesh")]
 script = ExtResource("1_r150o")
@@ -16,3 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.690331)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.798173, 0.602428, 0, -0.602428, 0.798173, 0, 0, 0)
+
+[node name="TerrainGenerator" parent="." instance=ExtResource("3_rgh2o")]
+
+[node name="TextureGeneration" parent="." instance=ExtResource("4_pbw6q")]
